@@ -1,16 +1,8 @@
 import pandas as pd
-import openpyxl
 
-book=openpyxl.Workbook()
+# Создаем JSON
+data = {'имя': ['Иван', 'Мария', 'Сергей'], 'возраст': [24, 25, 26]}
+df = pd.DataFrame(data)
 
-heet = book.active
-
-sheet['A1'] = 'a'
-sheet['A2'] = '10'
-
-book.save("test.xlsx")
-book.close()
-
-data = pd.read_excel('test.xlsx')
-data.to_json('output.json')
-
+# Сохранил
+df.to_excel('output.xlsx', index=False, header=True)
