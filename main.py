@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Создаем JSON
-data = {'имя': ['Иван', 'Мария', 'Сергей'], 'возраст': [24, 25, 26]}
+data = {'имя': ['Кирилл', 'Леша'], 'возраст': [25, 24]}
 df = pd.DataFrame(data)
 
 # Сохранил
-df.to_excel('output.xlsx', index=False, header=True)
+df.to_excel('output.xlsx')
